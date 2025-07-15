@@ -65,7 +65,7 @@ metadata$Code <- paste0(metadata$Country, "_", metadata$Station_id)
 ## catchments outlets
 shp_outlets <- sf::st_as_sf(metadata, coords = c('Station_lon','Station_lat'), crs = 4326)
 
-if(catchments == "all"){
+if("all" %in% catchments){
   catchments = metadata$Code
 }
 
